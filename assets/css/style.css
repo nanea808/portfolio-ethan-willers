@@ -74,7 +74,7 @@ footer {
     background-position: bottom;
 }
 
-/* Main content Selectors */
+/* Main Content Classes */
 .row {
     display: flex;
     flex-direction: row;
@@ -82,8 +82,7 @@ footer {
 }
 
 .sector-column {
-    flex: 1 0 50%;
-    flex-direction: column;
+    flex: 1 0 100%;
     padding: 20px;
 }
 
@@ -103,13 +102,31 @@ footer {
     border: 1px solid var(--grey-header);
 }
 
-/* Work Image Cards */
-.work-column {
-    flex: 1 0 100%;
-    padding: 20px;
-    /* smooth transition with screen resize */
+/* Work Classes */
+.work-main {
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    max-width: 100%;
+}
+
+.work-card {
+    max-width: 50%;
     transition: flex-basis 500ms linear;
-    margin-bottom: 20px;
+    margin-bottom: 1.5rem;
+}
+
+.work-card img {
+    max-width: 100%;
+    border: 5px solid var(--header-green-text);
+}
+
+.work-header {
+    position: absolute;
+    margin-top: 20px;
+    padding: 0.3% 0.8% 0.3% 3.5%;
+    background-color: var(--header-green-text);
+    color: var(--grey-header);
 }
 
 @media screen and (max-width: 530px) {
