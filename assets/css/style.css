@@ -110,7 +110,8 @@ nav a:hover {
 }
 
 .work-card {
-    flex: 1 0 50%;
+    flex: 25%;
+    padding: inherit;
     transition: flex-basis 500ms linear;
     margin-bottom: 1.5rem;
 }
@@ -129,14 +130,18 @@ nav a:hover {
     color: var(--grey-header);
 }
 
+.contact-info {
+    padding: inherit;
+    display: flex;
+    flex: 1 0 80%;
+    justify-content: space-evenly;
+    color: var(--header-green-text);
+    text-decoration: underline solid var(--grey-header) 2px;
+    text-underline-offset: 3px;
+}
+
 @media screen and (max-width: 530px) {
     header {
         flex-direction: column;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .work-main {
-        
     }
 }
