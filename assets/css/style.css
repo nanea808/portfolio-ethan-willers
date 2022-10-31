@@ -104,7 +104,6 @@ nav a:hover {
 
 /* Work Classes */
 .work-main {
-    justify-content: space-evenly;
     flex-wrap: wrap;
     padding: inherit;
     max-width: 100%;
@@ -113,14 +112,17 @@ nav a:hover {
 .work-card {
     flex: 25%;
     padding: inherit;
-    transition: flex-basis 500ms linear;
-    margin-bottom: 1.5rem;
 }
 
 .work-card img {
-    max-width: 350px;
-    max-height: 150px;
+    width: 300px;
+    height: 150px;
     border: 5px solid var(--header-green-text);
+    transition: outline 100ms ease-in-out;
+}
+
+.work-card:hover img {
+    outline: 5px solid var(--header-green-text);
 }
 
 .work-header {
@@ -143,24 +145,24 @@ nav a:hover {
     text-underline-offset: 3px;
 }
 
-#number {
-
+#number::before {
+    content: "📞";
 }
 
-#email {
-
+#email::before {
+    content: "📧";
 }
 
-#github {
-
+#github::before {
+    content: "😺";
 }
 
-#twitter {
-
+#twitter::before {
+    content: "🐦";
 }
 
-#spotify {
-
+#spotify::before {
+    content: "🎵";
 }
 
 @media screen and (max-width: 530px) {
