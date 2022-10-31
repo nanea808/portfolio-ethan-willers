@@ -64,7 +64,6 @@ nav a:hover {
 /* Background Class */
 .background {
     height: 250px;
-    width: 100%;
     background-image: url(../images/tumblr_cd9b5975db6cbef169049ee56f3f9a52_77569aae_2048.jpg);
     background-size: cover;
     background-position: bottom;
@@ -89,7 +88,9 @@ nav a:hover {
 
 .sector-header {
     padding: inherit;
+    padding-right: 120px;
     color: var(--header-green-text);
+    width: 100px;
 }
 
 .sector-paragraph {
@@ -130,9 +131,11 @@ nav a:hover {
     color: var(--grey-header);
 }
 
+/* Contact Info Classes */
 .contact-info {
     padding: inherit;
     display: flex;
+    flex-wrap: wrap;
     flex: 1 0 80%;
     justify-content: space-evenly;
     color: var(--header-green-text);
@@ -140,8 +143,34 @@ nav a:hover {
     text-underline-offset: 3px;
 }
 
+#number {
+
+}
+
+#email {
+
+}
+
+#github {
+
+}
+
+#twitter {
+
+}
+
+#spotify {
+
+}
+
 @media screen and (max-width: 530px) {
     header {
         flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 621px) {
+    .sector-column {
+        display: inline;
     }
 }
