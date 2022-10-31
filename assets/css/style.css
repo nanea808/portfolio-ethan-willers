@@ -13,7 +13,19 @@ body {
     line-height: 1.3;
 }
 
-/* Header + Navbar Selectors */
+h1, h2 {
+    line-height: 1.1;
+}
+
+h1 {
+    font-size: 200%;
+}
+
+h2 {
+    font-size: 160%;
+}
+
+/* Header + Navbar */
 header {
     display: flex;
     justify-content: space-between;
@@ -23,10 +35,9 @@ header {
     color: var(--grey-header);
 }
 
-h1 {
-    font-size: 200%;
-    background-color: var(--header-green-text);
+header h1 {
     padding: 0.3% 1% 0.3% 3.5%;
+    background-color: var(--header-green-text);
 }
 
 nav ul {
@@ -46,41 +57,63 @@ nav a:hover {
     color: var(--off-white);
 }
 
-/* Main Content Selectors */
-main {
+/* Footer Selectors */
+footer {
+    padding: 2%;
+    text-align: center;
+    margin-top: auto;
+    color: var(--header-green-text);
+}
+
+/* Background Class */
+.background {
+    height: 250px;
+    width: 100%;
+    background-image: url(/assets/images/tumblr_cd9b5975db6cbef169049ee56f3f9a52_77569aae_2048.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+/* Main content Selectors */
+.row {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.sector-column {
+    flex: 1 0 50%;
     flex-direction: column;
+    padding: 20px;
 }
 
-section {
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 1%;
+.justify-center {
+    justify-content: center;
 }
 
-h2 {
-    font-size: 150%;
-    padding: 0 0 0 0;
-    color: var(--header-green-text);  
+.sector-header {
+    color: var(--header-green-text);
 }
 
-p {
+.sector-paragraph {
     color: var(--off-white);
 }
 
-/* Footer Selectors */
-footer {
-    display: flex;
-    justify-content: center;
-    padding: 2%;
+.sector-line-break {
+    border: 1px solid var(--grey-header);
+}
+
+/* Work Image Cards */
+.work-column {
+    flex: 1 0 100%;
+    padding: 20px;
+    /* smooth transition with screen resize */
+    transition: flex-basis 500ms linear;
+    margin-bottom: 20px;
 }
 
 @media screen and (max-width: 530px) {
     header {
         flex-direction: column;
     }
-}
-
-.row {
-    
 }
