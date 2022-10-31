@@ -13,7 +13,7 @@ body {
     line-height: 1.3;
 }
 
-h1, h2 {
+h1, h2, h3 {
     line-height: 1.1;
 }
 
@@ -23,6 +23,10 @@ h1 {
 
 h2 {
     font-size: 160%;
+}
+
+h3 {
+    font-size: 110%;
 }
 
 /* Header + Navbar */
@@ -57,19 +61,11 @@ nav a:hover {
     color: var(--off-white);
 }
 
-/* Footer Selectors */
-footer {
-    padding: 2%;
-    text-align: center;
-    margin-top: auto;
-    color: var(--header-green-text);
-}
-
 /* Background Class */
 .background {
     height: 250px;
     width: 100%;
-    background-image: url(/assets/images/tumblr_cd9b5975db6cbef169049ee56f3f9a52_77569aae_2048.jpg);
+    background-image: url(../images/tumblr_cd9b5975db6cbef169049ee56f3f9a52_77569aae_2048.jpg);
     background-size: cover;
     background-position: bottom;
 }
@@ -82,6 +78,7 @@ footer {
 }
 
 .sector-column {
+    display: flex;
     flex: 1 0 100%;
     padding: 20px;
 }
@@ -91,10 +88,12 @@ footer {
 }
 
 .sector-header {
+    padding: inherit;
     color: var(--header-green-text);
 }
 
 .sector-paragraph {
+    padding: inherit;
     color: var(--off-white);
 }
 
@@ -106,18 +105,20 @@ footer {
 .work-main {
     justify-content: space-evenly;
     flex-wrap: wrap;
-    padding-top: 20px;
+    padding: inherit;
     max-width: 100%;
 }
 
 .work-card {
-    max-width: 50%;
+    flex: 25%;
+    padding: inherit;
     transition: flex-basis 500ms linear;
     margin-bottom: 1.5rem;
 }
 
 .work-card img {
-    max-width: 100%;
+    max-width: 350px;
+    max-height: 150px;
     border: 5px solid var(--header-green-text);
 }
 
@@ -127,6 +128,16 @@ footer {
     padding: 0.3% 0.8% 0.3% 3.5%;
     background-color: var(--header-green-text);
     color: var(--grey-header);
+}
+
+.contact-info {
+    padding: inherit;
+    display: flex;
+    flex: 1 0 80%;
+    justify-content: space-evenly;
+    color: var(--header-green-text);
+    text-decoration: underline solid var(--grey-header) 2px;
+    text-underline-offset: 3px;
 }
 
 @media screen and (max-width: 530px) {
