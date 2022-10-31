@@ -64,7 +64,6 @@ nav a:hover {
 /* Background Class */
 .background {
     height: 250px;
-    width: 100%;
     background-image: url(../images/tumblr_cd9b5975db6cbef169049ee56f3f9a52_77569aae_2048.jpg);
     background-size: cover;
     background-position: bottom;
@@ -89,7 +88,9 @@ nav a:hover {
 
 .sector-header {
     padding: inherit;
+    padding-right: 120px;
     color: var(--header-green-text);
+    width: 100px;
 }
 
 .sector-paragraph {
@@ -103,7 +104,6 @@ nav a:hover {
 
 /* Work Classes */
 .work-main {
-    justify-content: space-evenly;
     flex-wrap: wrap;
     padding: inherit;
     max-width: 100%;
@@ -112,14 +112,17 @@ nav a:hover {
 .work-card {
     flex: 25%;
     padding: inherit;
-    transition: flex-basis 500ms linear;
-    margin-bottom: 1.5rem;
 }
 
 .work-card img {
-    max-width: 350px;
-    max-height: 150px;
+    width: 300px;
+    height: 150px;
     border: 5px solid var(--header-green-text);
+    transition: outline 100ms ease-in-out;
+}
+
+.work-card:hover img {
+    outline: 5px solid var(--header-green-text);
 }
 
 .work-header {
@@ -130,9 +133,11 @@ nav a:hover {
     color: var(--grey-header);
 }
 
+/* Contact Info Classes + Id's */
 .contact-info {
     padding: inherit;
     display: flex;
+    flex-wrap: wrap;
     flex: 1 0 80%;
     justify-content: space-evenly;
     color: var(--header-green-text);
@@ -140,8 +145,34 @@ nav a:hover {
     text-underline-offset: 3px;
 }
 
+#number::before {
+    content: "📞";
+}
+
+#email::before {
+    content: "📧";
+}
+
+#github::before {
+    content: "😺";
+}
+
+#twitter::before {
+    content: "🐦";
+}
+
+#spotify::before {
+    content: "🎵";
+}
+
 @media screen and (max-width: 530px) {
     header {
         flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 621px) {
+    .sector-column {
+        display: inline;
     }
 }
