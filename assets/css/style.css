@@ -133,7 +133,7 @@ nav a:hover {
     color: var(--grey-header);
 }
 
-/* Contact Info Classes */
+/* Contact Info Classes + Id's */
 .contact-info {
     padding: inherit;
     display: flex;
