@@ -122,6 +122,7 @@ nav a:hover {
 }
 
 .work-card:hover img {
+    cursor: pointer;
     outline: 5px solid var(--header-green-text);
 }
 
